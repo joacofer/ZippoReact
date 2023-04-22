@@ -1,18 +1,40 @@
+import Contenido from './components/Contenido/Contenido';
+import NavBar from './components/NavBar/NavBar';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
+import DetalleContenido from './components/DetalleContenido/DetalleContenido';
 
+// CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import Contenido from './components/Contenido/Contenido'
-import NavBar from './components/NavBar/NavBar'
-
 
 
 function App() {
   
 
   return (
-    <div className="App">
-      <NavBar/>
-      <Contenido/>
-    </div>
+    <BrowserRouter>
+        <NavBar/>
+
+    <Routes>
+
+
+      <Route path='/' element = {<Contenido/>}/>
+      <Route path='/categoria/:cid' element = {<Contenido/>}/>
+
+      <Route path='/detalle/:pid' element = {<DetalleContenido/>}/>
+
+
+      <Route path='*' element = { <Navigate to = '/' />} /> 
+      
+
+      
+
+        
+
+    </Routes>
+
+    
+    </BrowserRouter>
   )
 }
 

@@ -1,0 +1,13 @@
+.icono {
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.icono p {
+    position: absolute;
+    transform: translateX(35px) translateY(-30px); 
+}

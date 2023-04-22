@@ -1,0 +1,24 @@
+.detalle {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(135, 80, 211);
+}
+
+.detalle h1 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+}
+
+.detalle h3 {
+    padding-top: 10px;
+
+}
+
+.detalle p {
+    padding-top: 10px;
+    font-size: 20px;
+
+}
+
