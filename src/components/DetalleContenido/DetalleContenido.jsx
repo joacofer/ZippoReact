@@ -2,22 +2,27 @@ import { useParams } from 'react-router-dom';
 import './DetalleContenido.css';
 import DetalleItem from '../DetalleItem/DetalleItem';
 import { useEffect, useState } from 'react';
-import { mFetch } from '../../utils/mFetch';
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
+
+
 
 
 const DetalleContenido = () => {
     const [productos, setProductos] = useState([])
     const {pid} = useParams()
-    useEffect(()=> {
 
-        mFetch(pid)
-        .then(resultado=>{
-          setProductos(resultado)
-        })
-        .catch(error=>console.log(error))
-        .finally(()=>setIsLoading(false))
 
-    } ,[]); 
+
+
+    useEffect(() => {
+      const dbFirestore = getFirestore()
+      const queryDoc = doc(dbFirestore, 'zippos', pid)
+  
+      getDoc(queryDoc)
+          .then(resp => setProductos({id: resp.id, ...resp.data()}))
+          .catch( error => console.log(error))
+        
+    }, [])
 
   return (
     <DetalleItem itemProd={productos}/>

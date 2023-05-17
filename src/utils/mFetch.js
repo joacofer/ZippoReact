@@ -39,7 +39,7 @@ let productos = [
        id:'5',
        nombre:"Violet",
        precio:115,
-       img:"/zipo7.png",
+       img:"../../public/zipo7.png",
        cantidad:1,
        categoria: "moderno",
        descripcion:"El encendedor viene sin llenar.Para obtener un rendimiento óptimo, le recomendamos utilizar piedras y mechas marca Zippo"

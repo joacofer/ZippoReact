@@ -1,0 +1,57 @@
+.contador {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.contador button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 26px;
+    color: #fff;
+    position: relative;
+    border-radius: 12px;
+}
+
+.contador button:hover {
+    background: linear-gradient(
+        45deg,
+        red,blue,deeppink,blue,
+        red,blue,deeppink,blue
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(1px);
+    
+}
+
+
+.contador h5 {
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.botonCarrito {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 26px;
+    color: #fff;
+    position: relative;
+    border-radius: 12px;    
+}
+
+
+.botonCarrito:hover {
+    background: linear-gradient(
+        45deg,
+        red,blue,deeppink,blue,
+        red,blue,deeppink,blue
+    );
+    background-size: 800%;
+    border-radius: 10px; 
+}

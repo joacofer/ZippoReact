@@ -1,0 +1,26 @@
+
+.detalleCompra {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 16px 26px;
+    position: relative;
+    background: rgb(9, 4, 4);
+    color: #0a0606;
+    border: none;
+    border-radius: 12px; 
+    cursor: pointer;
+
+}
+
+button:hover {
+    background: linear-gradient(
+        45deg,
+        red,blue,deeppink,blue,
+        red,blue,deeppink,blue
+    );
+    background-size: 800%;
+    border-radius: 10px; 
+}

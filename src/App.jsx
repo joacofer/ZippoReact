@@ -6,13 +6,18 @@ import DetalleContenido from './components/DetalleContenido/DetalleContenido';
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
+import ContenedorCarrito from './components/ContenedorCarrito/ContenedorCarrito';
+import { CarritoContextProvider } from './context/CarritoContext';
 
 
 function App() {
   
 
   return (
-    <BrowserRouter>
+
+  <CarritoContextProvider>
+
+      <BrowserRouter>
         <NavBar/>
 
     <Routes>
@@ -25,6 +30,9 @@ function App() {
 
 
       <Route path='*' element = { <Navigate to = '/' />} /> 
+
+
+      <Route path='/carrito' element = {<ContenedorCarrito/>}/>
       
 
       
@@ -34,7 +42,11 @@ function App() {
     </Routes>
 
     
-    </BrowserRouter>
+     </BrowserRouter>
+
+
+  </CarritoContextProvider>
+
   )
 }
 
